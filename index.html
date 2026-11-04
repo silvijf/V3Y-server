@@ -41,8 +41,9 @@
 
     main {
       padding: 8px;
-      position: relative;
+      position: absolute;
       height: calc(97.5dvh - 36px);
+      margin-top: 36px;
       top: 0;
       overflow-y: scroll;
     }
@@ -92,6 +93,7 @@
     #teams {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 15px;
     }
 
@@ -124,6 +126,7 @@
       height: 64px;
       margin: 10px;
       border-radius: 10px;
+      flex-shrink: 0;
     }
 
     .head:has(~ .player-text .status.online) {
