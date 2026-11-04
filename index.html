@@ -20,6 +20,7 @@
     }
 
     header {
+      position: relative;
       padding: 8px;
       background-color: #000;
       display: flex;
@@ -30,6 +31,12 @@
     header a {
       text-decoration: none;
       color: white;
+    }
+
+    header .separator {
+      position: relative;
+      border-left: 1px solid white;
+      background-color: #fff;
     }
 
     main {
@@ -126,7 +133,7 @@
     .head img {
       object-fit: cover;
       transform: scale(8);
-      transform-origin: 9px 9px;
+      transform-origin: 9.1px 9px;
       image-rendering: pixelated;
     }
 
@@ -191,6 +198,9 @@
 <body>
   <header>
     <a href="#on">AAN-knop</a>
+    <div class="separator"></div>
+    <a href="#teams">Teams & online spelers</a>
+    <div class="separator"></div>
     <a href="#rules">Regels</a>
   </header>
   <main>
@@ -254,8 +264,8 @@
     let alreadyOn = false;
     let canTurnOn = true;
 
-    const teams = [["W1Z4RT_", "sebHJVYGFSDFGHLL"], ["cheesoufle", "VDB_2012"], ["jorre_borre", "xxNo1302xx"], ["Gullgratis76", "Seth_hallo"],
-    ["_Dainel_", "silvijf38"], ["SherrieKilz", "tijmon67"], ["AMinecraft_Sheep"], ["STIJNKONTJEANUS"]]
+    const teams = [["W1Z4RT_", "sebHJVYGFSDFGHLL"], ["cheesoufle", "VDB_2012", "AMinecraft_Sheep"], ["jorre_borre", "xxNo1302xx"], ["Gullgratis76", "Seth_hallo"],
+    ["_Dainel_", "silvijf38"], ["SherrieKilz", "tijmon67"], ["STIJNKONTJEANUS"]]
 
     on.addEventListener("click", () => {
       if (canTurnOn && !alreadyOn) {
