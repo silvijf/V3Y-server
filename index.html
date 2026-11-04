@@ -303,7 +303,7 @@
             el.classList.add("online");
             el.children[1].innerText = "Online";
           }
-        } else playerCount.innerText = "Server is offline";
+        } else playerCount.innerText = alreadyOn ? "Server start op" : "Server is offline";
       } catch { }
     }
 
