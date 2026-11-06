@@ -267,8 +267,8 @@
     let alreadyOn = false;
     let canTurnOn = true;
 
-    const teams = [["W1Z4RT_", "sebHJVYGFSDFGHLL"], ["cheesoufle", "VDB_2012", "AMinecraft_Sheep"], ["jorre_borre", "xxNo1302xx"], ["Gullgratis76", "Seth_hallo"],
-    ["_Dainel_", "silvijf38"], ["SherrieKilz", "tijmon67"], ["STIJNKONTJEANUS", "J3ppie"]]
+    const teams = [["W1Z4RT_", "sebHJVYGFSDFGHLL"], ["cheesoufle", "VDB_2012"], ["jorre_borre", "xxNo1302xx"], ["Gullgratis76", "Seth_hallo"],
+    ["_Dainel_", "silvijf38"], ["SherrieKilz", "tijmon67"], ["STIJNKONTJEANUS", "J3ppie"], ["AMinecraft_Sheep"]]
 
     on.addEventListener("click", () => {
       if (canTurnOn && !alreadyOn) {
@@ -301,7 +301,7 @@
           for (player of result.players.list) {
             const el = document.querySelector(`.status[data-online="${player.name_clean}"]`);
             el.classList.add("online");
-            el.children[1].innerText = "Online";
+            el.children[1].innerText = (player.name_clean == "AMinecraft_Sheep") ? "Spectating" : "Online";
           }
         } else playerCount.innerText = alreadyOn ? "Server start op" : "Server is offline";
       } catch { }
